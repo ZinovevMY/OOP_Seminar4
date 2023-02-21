@@ -1,10 +1,10 @@
 package weapons;
 
-public class Sword extends Weapon{
+public class Sword implements Weapon{
 
     @Override
     public int damage() {
-        return 50;
+        return 70;
     }
 
     @Override
