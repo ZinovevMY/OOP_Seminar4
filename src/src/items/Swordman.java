@@ -1,10 +1,14 @@
 package items;
 
+import armors.Armor;
+import armors.ChainMail;
+import armors.Helmet;
+import armors.Shield;
 import weapons.Sword;
 
-public class Swordman extends Warrior<Sword>{
-    public Swordman(String name, Sword weapon){
-        super(name, weapon);
+public class Swordman extends Warrior<Sword, Armor>{
+    public Swordman(String name, Sword weapon, Helmet helmet, Shield shield, ChainMail chainMail){
+        super(name, weapon, helmet, shield, chainMail);
     }
 
     @Override

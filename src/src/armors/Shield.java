@@ -3,7 +3,7 @@ package armors;
 public class Shield implements Armor{
     @Override
     public int protection() {
-        return 15;
+        return rnd.nextInt(7);
     }
 
     @Override

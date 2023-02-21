@@ -1,9 +1,11 @@
 package armors;
 
+import java.util.Random;
+
 public class Helmet implements Armor{
     @Override
     public int protection() {
-        return 10;
+        return rnd.nextInt(3);
     }
 
     @Override

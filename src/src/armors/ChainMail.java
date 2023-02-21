@@ -3,7 +3,7 @@ package armors;
 public class ChainMail implements Armor{
     @Override
     public int protection() {
-        return 25;
+        return rnd.nextInt(5);
     }
 
     @Override
