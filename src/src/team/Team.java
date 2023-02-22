@@ -57,6 +57,6 @@ public class Team<T extends Warrior>{
             sb.append(item.toString() + "\n");
         }
 
-        return String.format("Команда %s нанесет максимальный урон %d атакует на дистанции %d", teamName, getTeamDamage(), getMaxDistance());
+        return String.format("Команда %s нанесет максимальный урон %d атакует на дистанции %d. Самая слабая броня команды %d", teamName, getTeamDamage(), getMaxDistance(), getMinArmor());
     }
 }
