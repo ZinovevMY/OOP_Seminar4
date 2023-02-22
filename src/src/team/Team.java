@@ -40,6 +40,15 @@ public class Team<T extends Warrior>{
         }
         return res;
     }
+    public int getMinArmor(){
+        int res = team.get(0).getMinArmor();
+        for (int i = 1; i < team.size(); i++){
+            if (team.get(i).getMinArmor() < res){
+                res = team.get(i).getMinArmor();
+            }
+        }
+        return res;
+    }
 
     @Override
     public String toString() {

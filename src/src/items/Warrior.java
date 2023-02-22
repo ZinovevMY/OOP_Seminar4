@@ -8,13 +8,19 @@ import java.util.Random;
 public abstract class Warrior<T extends Weapon, V extends Armor> {
     private String name;
     protected T weapon;
+    protected V shield;
+    protected V helmet;
+    protected V chainmail;
     protected Random rnd = new Random();
     private int healthPoint;
 
 
-    public Warrior(String name, T weapon) {
+    public Warrior(String name, T weapon, V helmet, V chainmail, V shield) {
         this.name = name;
         this.weapon = weapon;
+        this.helmet = helmet;
+        this.chainmail = chainmail;
+        this.shield = shield;
         healthPoint = 100;
     }
 
@@ -35,6 +41,17 @@ public abstract class Warrior<T extends Weapon, V extends Armor> {
 
     public int getMaxDamage() {
         return weapon.damage();
+    }
+
+    public int getMinArmor(){
+        int res = helmet.protection();
+        if (chainmail.protection() < res){
+            res = chainmail.protection();
+        }
+        if (shield.protection() < res){
+            res = shield.protection();
+        }
+        return res;
     }
 
     @Override

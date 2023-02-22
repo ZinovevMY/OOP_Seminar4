@@ -7,8 +7,10 @@ import armors.Shield;
 import weapons.Sword;
 
 public class Swordman extends Warrior<Sword, Armor>{
-    public Swordman(String name, Sword weapon, Helmet helmet, Shield shield, ChainMail chainMail){
-        super(name, weapon, helmet, shield, chainMail);
+
+    public Swordman(String name, Sword weapon, Helmet helmet, ChainMail chainMail, Shield shield){
+        super(name, weapon, helmet, chainMail, shield);
+
     }
 
     @Override

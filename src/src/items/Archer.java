@@ -1,12 +1,15 @@
 package items;
 
+import armors.ChainMail;
+import armors.Helmet;
+import armors.Shield;
 import weapons.Bow;
 
 public class Archer extends Warrior implements DistanceAttacker{
 
     private int distance;
-    public Archer(String name, Bow weapon){
-        super(name, weapon);
+    public Archer(String name, Bow weapon, Helmet helmet, ChainMail chainMail, Shield shield){
+        super(name, weapon, helmet, chainMail, shield);
         distance = weapon.getDistance() + rnd.nextInt(10);
     }
 
